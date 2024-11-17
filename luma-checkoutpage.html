@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="logo-wrapper">
+      <img
+        id="logo"
+        height="100"
+        alt="Smiling crescent moon"
+        src="https://static.vecteezy.com/system/resources/thumbnails/018/931/352/small_2x/cartoon-moon-icon-png.png"
+      />
+      <p id="logo-title">Luma Bakery</p>
+    </div>
+
+    <form
+      action="#"
+      name="checkout"
+      onsubmit="return validateFormOnSubmit(this);"
+    >
+      <div class="section-wrapper">
+        <h2>Items:</h2>
+        <ul class="image-list">
+          <li class="image-item">
+            <img
+              width="200px"
+              height="200px"
+              alt="earl grey macaron croissant"
+            />
+            <label for="earlGrey"
+              >Earl Grey Macaron Croissant
+              <span class="price">($6.75)</span></label
+            >
+            <input
+              type="number"
+              id="earlGrey"
+              name="item-quantity"
+              value="0"
+              min="0"
+            />
+          </li>
+          <li class="image-item">
+            <img
+              width="200px"
+              height="200px"
+              alt="matcha pistachio croissant"
+            />
+            <label for="matchaPistachio"
+              >Matcha Pistachio Croissant
+              <span class="price">($7.34)</span></label
+            >
+            <input
+              type="number"
+              id="matchaPistachio"
+              name="item-quantity"
+              value="0"
+              min="0"
+            />
+          </li>
+          <li class="image-item">
+            <img
+              width="200px"
+              height="200px"
+              alt="passion fruit ube cube croissant"
+            />
+            <label for="passionFruit"
+              >Passion Fruit Ube Cube Croissant
+              <span class="price">($8.00)</span></label
+            >
+            <input
+              type="number"
+              id="passionFruit"
+              name="item-quantity"
+              value="0"
+              min="0"
+            />
+          </li>
+          <li class="image-item">
+            <img
+              width="200px"
+              height="200px"
+              alt="sake white peach croissant"
+            />
+            <label for="sakeWhitePeach"
+              >Sake White Peach Croissant
+              <span class="price">($6.10)</span></label
+            >
+            <input
+              type="number"
+              id="sakeWhitePeach"
+              name="item-quantity"
+              value="0"
+              min="0"
+            />
+          </li>
+          <li class="image-item">
+            <img
+              width="200px"
+              height="200px"
+              alt="salted caramel coffee croissant"
+            />
+            <label for="saltedCaramelCoffee"
+              >Salted Caramel Coffee Croissant
+              <span class="price">($6.55)</span></label
+            >
+            <input
+              type="number"
+              id="saltedCaramelCoffee"
+              name="item-quantity"
+              value="0"
+              min="0"
+            />
+          </li>
+          <li class="image-item">
+            <img
+              width="200px"
+              height="200px"
+              alt="triple chocolate croissant"
+            />
+            <label for="tripleChoco"
+              >Triple Chocolate Croissant
+              <span class="price">($7.13)</span></label
+            >
+            <input
+              type="number"
+              id="tripleChoco"
+              name="item-quantity"
+              value="0"
+              min="0"
+            />
+          </li>
+        </ul>
+        <h4 id="total-h4">Total:</h4>
+        $<span id="total">0.00</span>
+      </div>
+
+      <div class="section-wrapper">
+        <h2>Order Information:</h2>
+        <h3>Customer Details</h3>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="pickup-datetime">Pick up Date & Time:</label>
+        <input
+          type="datetime-local"
+          id="pickup-datetime"
+          name="pickup-datetime"
+          required
+        />
+        <h3>Payment Details</h3>
+        <label for="cardholder">Cardholder Name:</label>
+        <input
+          type="text"
+          id="cardholder"
+          name="cardholder"
+          placeholder="John Doe"
+        />
+        <label for="cardnumber">Card Number:</label>
+        <input
+          type="text"
+          id="cardnumber"
+          name="cardnumber"
+          placeholder="1234 5678 9012 3456"
+        />
+        <label for="expiry">Expiry Date:</label>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" />
+        <label for="cvv">CVV:</label>
+        <input
+          type="text"
+          id="cvv"
+          name="cvv"
+          placeholder="123"
+          minlength="3"
+        />
+        <button type="submit">Submit Order</button>
+      </div>
+    </form>
+    <script src="./checkout-calculation.js"></script>
+    <script src="./submit.js"></script>
+  </body>
+</html>
