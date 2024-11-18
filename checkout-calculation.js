@@ -59,19 +59,19 @@ function updateTotal (totalEl, changedCroissant, newQuantity) {
 
 for (let i = 0; i <itemQuantityEl.length; i++){
     // 1) use an accessor method to get the <span> with the "total amount"
-    // const totalEl = ...
+    const totalEl = document.getElementById("total");
     itemQuantityEl[i].addEventListener("change", function(event) {
         // 2) use the event object to get the element that is changing (or the "target" element)
-        // const changedEl = ...
+        const changedEl = event.target;
 
         // 3) Now I want the "id" of that element. We will use it to figure out what croissant we picked
-        // const elementId = ...
-
+        const elementId =changedEl.id;
+       
         // 4) Since there is a "change" in quantity, figure out how to get the value of the new quantity
-        // const newQuantity = ...
-
+        const newQuantity = changedEl.value;
+       
         // 5) use elementId to get the croissant that changed from "croissants"
-        // const changedCroissant = ...
+        const changedCroissant = croissants[elementId];
 
         // 6) Call "updateTotal" method with the proper parameters
         updateTotal(totalEl, changedCroissant, newQuantity)

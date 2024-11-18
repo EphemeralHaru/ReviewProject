@@ -35,10 +35,11 @@
             <img
               width="200px"
               height="200px"
-              alt="earl grey macaron croissant"
+              alt="earl grey macaroon croissant"
+              src="assets/earl-grey-macaroon.png"
             />
             <label for="earlGrey"
-              >Earl Grey Macaron Croissant
+              >Earl Grey Macaroon Croissant
               <span class="price">($6.75)</span></label
             >
             <input
@@ -54,6 +55,7 @@
               width="200px"
               height="200px"
               alt="matcha pistachio croissant"
+              src="assets/matcha-pistachio.png"
             />
             <label for="matchaPistachio"
               >Matcha Pistachio Croissant
@@ -72,6 +74,7 @@
               width="200px"
               height="200px"
               alt="passion fruit ube cube croissant"
+              src="assets/passion-fruit-ube-cube.png"
             />
             <label for="passionFruit"
               >Passion Fruit Ube Cube Croissant
@@ -90,6 +93,7 @@
               width="200px"
               height="200px"
               alt="sake white peach croissant"
+              src="assets/sake-white-peach.png"
             />
             <label for="sakeWhitePeach"
               >Sake White Peach Croissant
@@ -108,6 +112,7 @@
               width="200px"
               height="200px"
               alt="salted caramel coffee croissant"
+              src="assets/salted-caramel-coffee.png"
             />
             <label for="saltedCaramelCoffee"
               >Salted Caramel Coffee Croissant
@@ -126,6 +131,7 @@
               width="200px"
               height="200px"
               alt="triple chocolate croissant"
+              src="assets/triple-choco.png"
             />
             <label for="tripleChoco"
               >Triple Chocolate Croissant
@@ -146,42 +152,55 @@
 
       <div class="section-wrapper">
         <h2>Order Information:</h2>
-        <h3>Customer Details</h3>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="pickup-datetime">Pick up Date & Time:</label>
-        <input
-          type="datetime-local"
-          id="pickup-datetime"
-          name="pickup-datetime"
-          required
-        />
-        <h3>Payment Details</h3>
-        <label for="cardholder">Cardholder Name:</label>
-        <input
-          type="text"
-          id="cardholder"
-          name="cardholder"
-          placeholder="John Doe"
-        />
-        <label for="cardnumber">Card Number:</label>
-        <input
-          type="text"
-          id="cardnumber"
-          name="cardnumber"
-          placeholder="1234 5678 9012 3456"
-        />
-        <label for="expiry">Expiry Date:</label>
-        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" />
-        <label for="cvv">CVV:</label>
-        <input
-          type="text"
-          id="cvv"
-          name="cvv"
-          placeholder="123"
-          minlength="3"
-        />
-        <button type="submit">Submit Order</button>
+        <h3 class="margin-top-medium">Customer Details</h3>
+        <div class="margin-top-small">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="margin-top-small">
+          <label for="pickup-datetime">Pick up Date & Time:</label>
+          <input
+            type="datetime-local"
+            id="pickup-datetime"
+            name="pickup-datetime"
+            required
+          />
+        </div>
+        <h3 class="margin-top-medium">Payment Details</h3>
+        <div class="margin-top-small">
+          <label for="cardholder">Cardholder Name:</label>
+          <input
+            type="text"
+            id="cardholder"
+            name="cardholder"
+            placeholder="John Doe"
+          />
+        </div>
+        <div class="margin-top-small">
+          <label for="cardnumber">Card Number:</label>
+          <input
+            type="text"
+            id="cardnumber"
+            name="cardnumber"
+            placeholder="1234 5678 9012 3456"
+          />
+        </div>
+        <div class="margin-top-small">
+          <label for="expiry">Expiry Date:</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/YY" />
+        </div>
+        <div class="margin-top-small">
+          <label for="cvv">CVV:</label>
+          <input
+            type="password"
+            id="cvv"
+            name="cvv"
+            placeholder="123"
+            minlength="3"
+          />
+        </div>
+        <button type="submit" class="margin-top-medium">Submit Order</button>
       </div>
     </form>
     <script src="./checkout-calculation.js"></script>
